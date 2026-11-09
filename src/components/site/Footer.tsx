@@ -6,8 +6,8 @@ import { waLink } from "@/lib/whatsapp";
 export function Footer() {
   const { scrollTo, openOrder } = useSite();
   const nav = [
-    ["#collection", "Collection"],
-    ["#bestsellers", "Bestsellers"],
+    ["#top", "Home"],
+    ["#collection", "Collections"],
     ["#story", "Our Story"],
     ["#occasions", "Occasions"],
     ["#gallery", "Gallery"],
@@ -52,7 +52,7 @@ export function Footer() {
   ];
 
   return (
-    <footer id="contact" data-tone="dark" className="relative overflow-hidden bg-ink px-5 pt-24 text-bone md:px-[4vw] md:pt-32">
+    <footer id="contact" data-tone="dark" className="theme-dark relative overflow-hidden bg-ink px-5 pt-24 text-bone md:px-[4vw] md:pt-32">
       <div className="grid gap-12 border-b border-bone/10 pb-20 sm:grid-cols-2 md:grid-cols-12 md:gap-6">
         <div className="md:col-span-4">
           <p className="font-serif text-[2rem] font-light leading-tight">
@@ -60,7 +60,7 @@ export function Footer() {
           </p>
           <button
             onClick={() => openOrder()}
-            className="group relative mt-8 overflow-hidden border border-gold px-7 py-3.5 text-[10.5px] font-semibold uppercase tracking-[0.28em] text-gold transition-colors duration-500 hover:text-ink"
+            className="group relative rounded-full mt-8 overflow-hidden border border-gold px-7 py-3.5 text-[12px] font-semibold tracking-[0.05em] text-gold transition-colors duration-500 hover:text-ink"
           >
             <span className="absolute inset-0 origin-left scale-x-0 bg-gold transition-transform duration-700 ease-[var(--ease-lux)] group-hover:scale-x-100" />
             <span className="relative">Begin your order</span>

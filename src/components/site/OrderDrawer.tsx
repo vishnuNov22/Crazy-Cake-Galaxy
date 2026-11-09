@@ -72,7 +72,7 @@ export function OrderDrawer({ open, product, occasion, onClose }: Props) {
           >
             <div className="flex items-center justify-between border-b border-bone/10 px-6 py-5 md:px-12">
               <p className="eyebrow text-bone/55">Order · via WhatsApp</p>
-              <button onClick={onClose} aria-label="Close order form" className="grid h-10 w-10 place-items-center border border-bone/20 transition-colors hover:bg-bone hover:text-noir">
+              <button onClick={onClose} aria-label="Close order form" className="grid h-10 w-10 place-items-center rounded-full border border-bone/20 transition-colors hover:bg-bone hover:text-noir">
                 <X className="h-4 w-4" />
               </button>
             </div>
@@ -97,7 +97,7 @@ export function OrderDrawer({ open, product, occasion, onClose }: Props) {
                     ))}
                     <option value={CUSTOM}>{CUSTOM}</option>
                   </select>
-                  {touched && !form.cake && <span className="mt-1.5 block text-[12px] text-[#d6a090]">Please choose a cake</span>}
+                  {touched && !form.cake && <span className="mt-1.5 block text-[12px] text-gold">Please choose a cake</span>}
                 </Field>
                 <Field label="Occasion">
                   <select className={`${input} cursor-pointer`} value={form.occasion} onChange={set("occasion")}>
@@ -123,7 +123,7 @@ export function OrderDrawer({ open, product, occasion, onClose }: Props) {
                 <div className="mt-2 flex flex-col gap-5 sm:col-span-2">
                   <button
                     type="submit"
-                    className="group relative flex items-center justify-center gap-3 overflow-hidden bg-bone px-8 py-5 text-[11px] font-semibold uppercase tracking-[0.28em] text-noir"
+                    className="group relative rounded-full flex items-center justify-center gap-3 overflow-hidden bg-bone px-8 py-5 text-[12px] font-semibold tracking-[0.05em] text-noir"
                   >
                     <span className="absolute inset-0 origin-left scale-x-0 bg-gold transition-transform duration-700 ease-[var(--ease-lux)] group-hover:scale-x-100" />
                     <MessageCircle className="relative h-4 w-4" />

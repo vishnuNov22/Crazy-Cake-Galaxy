@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
-import "@fontsource/gilda-display";
-import "@fontsource-variable/jost";
+import "@fontsource-variable/fraunces/soft.css";
+import "@fontsource-variable/fraunces/soft-italic.css";
+import "@fontsource-variable/dm-sans";
 import "./globals.css";
 import { site } from "@/lib/site";
 
@@ -18,7 +19,7 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#152038",
+  themeColor: "#FFF7F2",
   width: "device-width",
   initialScale: 1,
   viewportFit: "cover",

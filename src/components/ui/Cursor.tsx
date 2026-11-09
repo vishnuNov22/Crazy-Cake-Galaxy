@@ -33,7 +33,7 @@ export function Cursor() {
         const isLabel = next !== "" && next !== "hover";
         gsap.to(el, {
           scale: isLabel ? 2.8 : next ? 1.5 : 1,
-          backgroundColor: isLabel ? "rgba(194,165,125,0.95)" : "rgba(194,165,125,0)", borderColor: isLabel ? "rgba(194,165,125,0)" : "rgba(194,165,125,0.85)",
+          backgroundColor: isLabel ? "rgba(207,51,102,0.95)" : "rgba(207,51,102,0)", borderColor: isLabel ? "rgba(207,51,102,0)" : "rgba(207,51,102,0.85)",
           duration: 0.45,
           ease: "power3.out",
         });

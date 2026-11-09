@@ -1,21 +1,29 @@
 @import "tailwindcss";
 
 @theme {
-  /* Midnight Navy & Ivory — "noir/onyx/char/ink" are the deep (navy) surfaces,
-     "bone" is the text colour on them. .theme-light swaps them for ivory sections. */
-  --color-noir: #152038;      /* midnight navy */
-  --color-onyx: #1a2743;      /* alternate navy */
-  --color-char: #223152;      /* raised navy / image wells */
-  --color-ink: #0f182b;       /* footer */
-  --color-bone: #f5f2ec;      /* ivory text */
-  --color-stone: #aab1bf;
-  --color-gold: #b8955a;      /* antique gold */
-  --color-gold-deep: #9a7a45;
-  --color-navy: #152038;
-  --color-ivory: #f5f2ec;
+  /*
+   * Colour system — "Sugar & Plum".
+   * Token names are semantic: noir = page surface, onyx = alternate surface, char = image well,
+   * ink = deepest surface, bone = text, gold = the accent (raspberry). The base is a warm cream;
+   * `.theme-dark`, `.theme-blush`, `.theme-mint` and `.theme-berry` re-map them per section.
+   */
+  --color-noir: #fff7f2;      /* cream */
+  --color-onyx: #fdeeea;
+  --color-char: #f8dde3;      /* blush wells behind photographs */
+  --color-ink: #2b1b3a;
+  --color-bone: #2b1b3a;      /* plum text */
+  --color-stone: #6e5f7a;
+  --color-gold: #cf3366;      /* raspberry accent */
+  --color-gold-deep: #a82350;
+  --color-plum: #2b1b3a;
+  --color-blush: #f9d4db;
+  --color-pistachio: #cfe8d6;
+  --color-butter: #ffe49a;
+  --color-berry: #cf3366;
+  --color-cream: #fff7f2;
 
-  --font-serif: "Gilda Display", "Didot", Georgia, serif;
-  --font-sans: "Jost Variable", Jost, ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Fraunces Variable", "Fraunces", Georgia, serif;
+  --font-sans: "DM Sans Variable", "DM Sans", ui-sans-serif, system-ui, sans-serif;
 
   --ease-lux: cubic-bezier(0.16, 1, 0.3, 1);
 }
@@ -37,7 +45,7 @@ body {
   background: var(--color-noir);
   color: var(--color-bone);
   font-family: var(--font-sans);
-  font-weight: 350;
+  font-weight: 400;
   /* Gilda Display has no italic — never fake one */
   font-synthesis: none;
   -webkit-font-smoothing: antialiased;
@@ -61,30 +69,56 @@ textarea:focus-visible {
 
 /* Typographic primitives */
 .eyebrow {
-  font-size: 10px;
-  font-weight: 500;
-  letter-spacing: 0.42em;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.24em;
   text-transform: uppercase;
 }
 .display {
   font-family: var(--font-serif);
-  font-weight: 400;
-  letter-spacing: -0.012em;
-  line-height: 1.08;
+  font-weight: 450;
+  letter-spacing: -0.025em;
+  line-height: 1.02;
+  font-variation-settings: "SOFT" 100;
 }
 
-/*
- * Light sections: swap the palette inside the section so every component
- * (text, hairlines, buttons, hover fills) inverts automatically.
- */
+/* Section palettes — every component inverts automatically through the tokens. */
 .theme-light {
-  --color-noir: #f5f2ec;   /* ivory */
-  --color-onyx: #eeeae2;
-  --color-char: #e6e0d5;
-  --color-ink: #ede8df;
-  --color-bone: #1b2333;   /* navy text */
-  --color-stone: #5e6575;
-  --color-gold: #9a7a45;   /* deeper gold for contrast on ivory */
+  color: var(--color-bone);
+}
+.theme-dark {
+  --color-noir: #2b1b3a;
+  --color-onyx: #35224a;
+  --color-char: #46305d;
+  --color-ink: #1f1230;
+  --color-bone: #fff1ee;
+  --color-stone: #cbb8d8;
+  --color-gold: #ff8fb1;
+  color: var(--color-bone);
+  background: var(--color-noir);
+}
+.theme-blush {
+  --color-noir: #f9d4db;
+  --color-onyx: #f5c3ce;
+  --color-char: #fde9ed;
+  --color-gold: #b8204f;
+  color: var(--color-bone);
+}
+.theme-mint {
+  --color-noir: #d3ebdb;
+  --color-onyx: #c4e2cf;
+  --color-char: #eaf6ee;
+  --color-gold: #b8204f;
+  color: var(--color-bone);
+}
+.theme-berry {
+  --color-noir: #cf3366;
+  --color-onyx: #bd2c5a;
+  --color-char: #a82350;
+  --color-ink: #8f1c44;
+  --color-bone: #fff3f0;
+  --color-stone: #ffd3de;
+  --color-gold: #ffe49a;
   color: var(--color-bone);
 }
 .numeral {
@@ -122,7 +156,7 @@ textarea:focus-visible {
 /* Gold hairline rule */
 .rule {
   height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(194, 165, 125, 0.45), transparent);
+  background: linear-gradient(90deg, transparent, rgba(207, 51, 102, 0.4), transparent);
 }
 
 /* Arched vitrine frame */
@@ -155,4 +189,16 @@ textarea:focus-visible {
     animation-duration: 0.001ms !important;
     transition-duration: 0.001ms !important;
   }
+}
+
+/* Hero scroll cue */
+@keyframes bob {
+  0%, 100% { transform: translateY(-3px); }
+  50% { transform: translateY(3px); }
+}
+
+/* Marquee ticker */
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
 }

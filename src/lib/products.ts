@@ -1,12 +1,12 @@
 import type { StaticImageData } from "next/image";
 
-import chocolateDrip from "@/assets/cakes/chocolate-drip-cake.jpg";
-import crown from "@/assets/cakes/crown-celebration-cake.jpg";
-import anniversary from "@/assets/cakes/anniversary-cream-cake.jpg";
-import rasamalai from "@/assets/cakes/rasamalai-cake.jpg";
-import character from "@/assets/cakes/character-birthday-cake.jpg";
-import fondant from "@/assets/cakes/fondant-tiered-cake.jpg";
-import brownies from "@/assets/cakes/brownie-box.jpg";
+import chocolateDrip from "@/assets/cakes/chocolate-drip-cake.webp";
+import crown from "@/assets/cakes/crown-celebration-cake.webp";
+import anniversary from "@/assets/cakes/anniversary-cream-cake.webp";
+import rasamalai from "@/assets/cakes/rasamalai-cake.webp";
+import character from "@/assets/cakes/character-birthday-cake.webp";
+import fondant from "@/assets/cakes/fondant-tiered-cake.webp";
+import brownies from "@/assets/cakes/brownie-box.webp";
 
 export type Category = "Birthday" | "Chocolate" | "Designer" | "Celebration" | "Custom" | "Brownies";
 

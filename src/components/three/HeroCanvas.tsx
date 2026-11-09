@@ -8,7 +8,7 @@ import * as THREE from "three";
 /* The client's real cake, as a lit photographic plane (no fake mesh). */
 /* ------------------------------------------------------------------ */
 
-const CAKE_SRC = "/hero-cake.png";
+const CAKE_SRC = "/hero-cake.webp";
 const CAKE_ASPECT = 1559 / 1452;
 
 const cakeVertex = /* glsl */ `
@@ -284,7 +284,7 @@ function Scene({ onReady }: { onReady?: () => void }) {
         <Pearls />
       </Rig>
       <GoldDust />
-      <ContactShadows position={[0, 0.001, 0]} opacity={0.65} scale={9} blur={2.6} far={3} frames={1} color="#1a0d06" />
+      <ContactShadows position={[0, 0.001, 0]} opacity={0.5} scale={9} blur={2.6} far={3} frames={1} color="#5a2a48" />
     </>
   );
 }

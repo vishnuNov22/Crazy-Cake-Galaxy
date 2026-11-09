@@ -33,7 +33,7 @@ export function Newsletter() {
   };
 
   return (
-    <section id="letters" data-tone="dark" className="relative overflow-hidden bg-onyx px-5 py-28 text-bone md:px-[4vw] md:py-40">
+    <section id="letters" data-tone="dark" className="theme-berry relative overflow-hidden bg-noir px-5 py-28 text-bone md:px-[4vw] md:py-40">
       <div className="mx-auto grid max-w-6xl gap-14 md:grid-cols-12 md:items-end md:gap-6">
         <div className="md:col-span-6">
           <p data-reveal className="eyebrow mb-6 flex items-center gap-4 text-gold">

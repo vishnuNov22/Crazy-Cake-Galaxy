@@ -19,7 +19,7 @@ export function Testimonials() {
   }, []);
 
   return (
-    <section id="kind-words" data-tone="dark" className="relative bg-noir px-5 py-28 text-center md:px-[10vw] md:py-44">
+    <section id="kind-words" data-tone="light" className="relative bg-noir px-5 py-28 text-center md:px-[10vw] md:py-44">
       <p data-reveal className="eyebrow mb-10 text-gold">Kind Words</p>
       <span aria-hidden data-reveal className="mx-auto block h-14 w-px bg-gradient-to-b from-transparent to-gold/70" />
 

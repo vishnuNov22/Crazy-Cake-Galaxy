@@ -7,23 +7,23 @@ export function Loader({ done }: { done: boolean }) {
     <AnimatePresence>
       {!done && (
         <motion.div
-          className="fixed inset-0 z-[200] flex flex-col items-center justify-center bg-noir text-bone"
-          exit={{ clipPath: "inset(0% 0% 100% 0%)", transition: { duration: 1, ease: [0.76, 0, 0.24, 1] } }}
-          style={{ clipPath: "inset(0% 0% 0% 0%)" }}
+          className="theme-blush fixed inset-0 z-[200] flex flex-col items-center justify-center bg-noir text-bone"
+          exit={{ clipPath: "circle(0% at 50% 50%)", transition: { duration: 1, ease: [0.76, 0, 0.24, 1] } }}
+          style={{ clipPath: "circle(150% at 50% 50%)" }}
         >
           <motion.p
-            className="font-serif text-3xl font-normal uppercase tracking-[0.32em] md:text-4xl"
+            className="font-serif text-4xl tracking-tight md:text-6xl"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0, transition: { duration: 0.9, ease: [0.16, 1, 0.3, 1] } }}
           >
-            Crazy Cakes
+            Crazy Cakes <span className="italic text-gold">Galaxy</span>
           </motion.p>
           <motion.span
-            className="mt-6 block h-px w-40 origin-left bg-gold"
+            className="mt-8 block h-1 w-40 origin-left rounded-full bg-gold"
             initial={{ scaleX: 0 }}
             animate={{ scaleX: 1, transition: { duration: 1.4, ease: [0.65, 0, 0.35, 1] } }}
           />
-          <p className="mt-4 text-[9px] uppercase tracking-[0.6em] text-gold">Galaxy</p>
+          <p className="mt-4 text-[11px] font-semibold uppercase tracking-[0.3em] text-bone/60">Handcrafted · Chennai</p>
         </motion.div>
       )}
     </AnimatePresence>

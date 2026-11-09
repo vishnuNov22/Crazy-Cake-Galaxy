@@ -25,7 +25,7 @@ export function Occasions() {
   const [active, setActive] = useState(0);
   const o = occasions[active];
   return (
-    <section id="occasions" data-tone="light" className="theme-light relative bg-noir px-5 py-28 md:px-[4vw] md:py-40">
+    <section id="occasions" data-tone="light" className="theme-blush relative bg-noir px-5 py-28 md:px-[4vw] md:py-40">
       <div className="grid gap-14 md:grid-cols-12 md:gap-6">
         <div className="md:col-span-7">
           <p data-reveal className="eyebrow mb-6 flex items-center gap-4 text-bone/55">

@@ -45,7 +45,7 @@ export function Lightbox({ items, index, onClose, onIndex }: Props) {
             <span className="text-[11px] tabular-nums uppercase tracking-[0.3em] text-bone/60">
               {String(index + 1).padStart(2, "0")} / {String(items.length).padStart(2, "0")}
             </span>
-            <button ref={closeBtn} onClick={onClose} aria-label="Close" className="grid h-11 w-11 place-items-center border border-bone/20 text-bone transition-colors hover:border-gold hover:text-gold">
+            <button ref={closeBtn} onClick={onClose} aria-label="Close" className="grid h-11 w-11 place-items-center rounded-full border border-bone/20 text-bone transition-colors hover:border-gold hover:text-gold">
               <X className="h-4 w-4" />
             </button>
           </div>
@@ -62,10 +62,10 @@ export function Lightbox({ items, index, onClose, onIndex }: Props) {
               <p className="mt-1 font-serif text-2xl font-light text-bone md:text-3xl">{item.caption}</p>
             </motion.div>
             <div className="flex gap-2">
-              <button aria-label="Previous" onClick={() => onIndex((index - 1 + items.length) % items.length)} className="grid h-11 w-11 place-items-center border border-bone/20 text-bone hover:border-gold hover:text-gold">
+              <button aria-label="Previous" onClick={() => onIndex((index - 1 + items.length) % items.length)} className="grid h-11 w-11 place-items-center rounded-full border border-bone/20 text-bone hover:border-gold hover:text-gold">
                 <ArrowLeft className="h-4 w-4" />
               </button>
-              <button aria-label="Next" onClick={() => onIndex((index + 1) % items.length)} className="grid h-11 w-11 place-items-center border border-bone/20 text-bone hover:border-gold hover:text-gold">
+              <button aria-label="Next" onClick={() => onIndex((index + 1) % items.length)} className="grid h-11 w-11 place-items-center rounded-full border border-bone/20 text-bone hover:border-gold hover:text-gold">
                 <ArrowRight className="h-4 w-4" />
               </button>
             </div>
